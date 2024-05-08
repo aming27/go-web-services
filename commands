@@ -1,0 +1,7 @@
+docker run --name readinglist-db -e POSTGRES_PASSWORD="mypassword" -d -p 5432:5432 postgres 
+docker exec <container_id> /bin/sh -c psql -h localhost -p 5432 -U postgres
+docker exec <container_id> /bin/sh -c 'psql -h localhost -p 5432 -U postgres < setup.sql'
+
+
+
+
